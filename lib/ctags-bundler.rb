@@ -7,7 +7,7 @@ module Ctags
 
     def generate_tags
       paths = (bundler_paths << '.').join(' ')
-      cmd   = "find #{paths} -type f -name \\*.rb | ctags -f tags -L -"
+      cmd   = "find #{paths} -type f | ctags -f tags -L -"
 
       system(cmd)
     end
